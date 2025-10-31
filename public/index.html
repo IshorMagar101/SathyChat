@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Chat Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="login-screen" class="login-screen">
+      <div class="login-card">
+        <h1>Welcome to Chat</h1>
+        <p>Enter your username to join the conversation</p>
+        <form id="login-form">
+          <input
+            type="text"
+            id="username-input"
+            placeholder="Enter your username"
+            maxlength="30"
+            required
+            autocomplete="off"
+          >
+          <button type="submit">Join Chat</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="chat-screen" class="chat-screen hidden">
+      <div class="chat-container">
+        <header class="chat-header">
+          <div class="header-content">
+            <h2>Chat Room</h2>
+            <div class="user-info">
+              <span id="current-username"></span>
+              <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+          </div>
+        </header>
+
+        <aside class="online-users">
+          <h3>Online Users (<span id="user-count">0</span>)</h3>
+          <ul id="users-list"></ul>
+        </aside>
+
+        <main class="chat-main">
+          <div id="messages-container" class="messages-container"></div>
+          <div id="typing-indicator" class="typing-indicator hidden"></div>
+
+          <form id="message-form" class="message-form">
+            <input
+              type="text"
+              id="message-input"
+              placeholder="Type a message..."
+              maxlength="500"
+              autocomplete="off"
+              required
+            >
+            <button type="submit">Send</button>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
