@@ -250,11 +250,3 @@ Possible improvements for advanced demonstration:
 ## License
 
 MIT License - Free to use for educational purposes.
-
-## Support
-
-For questions or issues during presentation preparation:
-- Review code comments in all files
-- Test with multiple browser windows
-- Practice explaining the Socket.IO connection flow
-- Be prepared to demonstrate real-time features live
